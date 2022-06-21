@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.18/dist/sweetalert2.all.min.js"></script>
+    <title>Bookshelf Apps</title>
+  </head>
+  <body class="bgImg">
+    <header class="header">
+      <h1>Bookshelf Apps</h1>
+    </header>
+    <main>
+      <div class="content">
+        <section class="addBook_section card">
+          <h2>Tambah Buku</h2>
+          <form id="addBook_form">
+            <div class="addBook_formInput">
+              <label for="formInput_keywordAdd"></label>
+              <input
+                type="text"
+                id="formInput_keywordAdd"
+                placeholder="Masukan keyword buku"
+              />
+            </div>
+            <div class="addBook_formButton">
+              <button type="submit" id="addBook_formButton">Cari</button>
+            </div>
+          </form>
+        </section>
+        <section class="resBook_section card">
+          <h5 id="resBook_keyword">Hasil keyword dari</h5>
+          <article class="resBook_items"></article>
+        </section>
+      </div>
+
+      <aside>
+        <section class="shelfBook_section card">
+          <h2>Rak Buku</h2>
+          <form id="shelfBook_form">
+            <div class="shelfBook_formInput">
+              <label for="formInput_keywordShelf"></label>
+              <input
+                type="text"
+                id="formInput_keywordShelf"
+                placeholder="Masukan keyword buku"
+              />
+            </div>
+            <div class="shelfBook_formButton">
+              <button type="submit" id="shelfBook_formButton">Cari</button>
+            </div>
+          </form>
+          <article class="shelfBook_uncompleted">
+            <h4>Belum selesai dibaca</h4>
+            <div class="shelfBook_items" id="uncompletedBookList"></div>
+          </article>
+          <article class="shelfBook_completed">
+            <h4>Selesai dibaca</h4>
+            <div class="shelfBook_items" id="completedBookList"></div>
+          </article>
+        </section>
+      </aside>
+    </main>
+    <footer></footer>
+    <script src="assets/js/app.js"></script>
+  </body>
+</html>

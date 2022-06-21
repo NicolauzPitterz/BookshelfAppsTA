@@ -1,0 +1,275 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+input,
+button {
+  font-family: "Poppins", sans-serif;
+  color: #34384d;
+}
+
+.bgImg {
+  background: url("../img/janko-ferlic-sfL_QOnmy00-unsplash.jpg") no-repeat
+    center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 0;
+  background-color: #34384d;
+  color: #f7e5d6;
+}
+
+main {
+  display: flex;
+  padding: 32px 16px;
+  overflow: auto;
+}
+
+.content {
+  flex-grow: 1;
+  flex-basis: 60%;
+  margin: 0 16px;
+}
+
+aside {
+  flex-grow: 1;
+  flex-basis: 40%;
+  margin: 0 16px;
+}
+
+section > h2 {
+  margin-bottom: 16px;
+  border-bottom: 2px solid #34384d;
+}
+
+.addBook_section,
+.resBook_section,
+.shelfBook_section {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 8px;
+  padding: 16px;
+}
+
+.addBook_section > form,
+.shelfBook_section > form {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.shelfBook_section > form {
+  margin-bottom: 16px;
+}
+
+.addBook_formInput,
+.shelfBook_formInput {
+  flex-basis: 100%;
+}
+
+.addBook_formInput > input,
+.shelfBook_formInput > input {
+  width: 100%;
+  padding: 8px;
+  border: 0;
+  border-radius: 8px;
+}
+
+.addBook_formButton,
+.shelfBook_formButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.addBook_formButton > button,
+.shelfBook_formButton > button {
+  padding: 8px;
+  border: 0;
+  border-radius: 8px;
+  background-color: #34384d;
+  color: #f7e5d6;
+  cursor: pointer;
+}
+
+.resBook_section > h5 {
+  font-weight: 400;
+}
+
+.resBook_items,
+.shelfBook_items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 32px;
+  margin: 16px;
+}
+
+.itemsBook {
+  max-width: 125px;
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  border-bottom: 2px solid #34384d;
+}
+
+.itemsBook > img {
+  width: 100%;
+  max-height: 150px;
+}
+
+.itemsBook_details {
+  flex-grow: 1;
+  margin: 8px 4px;
+}
+
+.itemsBook_details > p {
+  font-size: 12px;
+}
+
+.itemsBook > button {
+  width: 100%;
+  margin: 4px 0;
+  border: 0;
+  border-radius: 10px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.shelfBook_uncompleted,
+.shelfBook_completed {
+  margin: 16px 0 0;
+}
+
+.shelfBook_section h4 {
+  padding-left: 4px;
+  border-radius: 4px;
+  border-left: 4px solid #34384d;
+}
+
+.btnAdd,
+.btnDone,
+.btnUndo {
+  background-color: green;
+  color: #f7e5d6;
+  cursor: pointer;
+}
+
+.btnDelete {
+  background-color: red;
+  color: #f7e5d6;
+  cursor: pointer;
+}
+
+.card {
+  backdrop-filter: blur(8px) saturate(180%);
+  -webkit-backdrop-filter: blur(8px) saturate(180%);
+  background-color: rgba(247, 229, 214, 0.75);
+  border-radius: 16px;
+  border: 1px solid rgba(209, 213, 219, 0.3);
+}
+
+.hidden {
+  display: none;
+}
+
+@media screen and (max-width: 992px) {
+  main {
+    flex-direction: column;
+  }
+
+  aside {
+    margin: 0 16px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .resBook_items,
+  .shelfBook_items {
+    gap: 16px;
+    margin: 16px 0;
+  }
+
+  .itemsBook {
+    max-width: 100px;
+  }
+
+  .itemsBook > button {
+    font-size: 0.625rem;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  h2 {
+    font-size: 1rem;
+  }
+
+  h5,
+  input {
+    font-size: 0.75rem;
+  }
+
+  main {
+    padding: 16px;
+  }
+
+  .content,
+  aside {
+    margin: 0;
+  }
+
+  .addBook_formInput > input,
+  .shelfBook_formInput > input,
+  .addBook_formButton > button,
+  .shelfBook_formButton > button {
+    padding: 4px;
+  }
+
+  .shelfBook_uncompleted,
+  .shelfBook_completed {
+    margin: 0;
+  }
+
+  .shelfBook_section h4 {
+    font-size: 0.875rem;
+  }
+
+  .shelfBook_items {
+    gap: 8px;
+    margin: 8px 0 16px;
+  }
+
+  .itemsBook {
+    max-width: 80px;
+    padding: 4px;
+  }
+
+  .itemsBook_details {
+    margin: 4px;
+  }
+
+  .itemsBook_details > p {
+    font-size: 0.625rem;
+  }
+
+  .itemsBook > button {
+    font-size: 0.5rem;
+  }
+}
