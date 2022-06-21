@@ -161,11 +161,15 @@ section > h2 {
 }
 
 .btnAdd,
-.btnDone,
-.btnUndo {
-  background-color: green;
+.btnDone {
+  background-color: #34384d;
   color: #f7e5d6;
   cursor: pointer;
+}
+
+.btnUndo {
+  background-color: #f7e5d6;
+  color: #34384d;
 }
 
 .btnDelete {
